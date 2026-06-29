@@ -179,7 +179,7 @@ article strong { color: var(--text-primary); font-weight: 700; }
 .gallery-wrap { max-width: 1040px; margin: 3.5rem auto 0; padding: 0 1.5rem; }
 .gallery-title { text-align: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(1.4rem, 3vw, 2rem); color: var(--text-primary); margin-bottom: 2rem; }
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-.gallery .item .photo { aspect-ratio: 4/5; }
+.gallery .item .photo { aspect-ratio: 3/2; }
 .gallery .item figcaption { margin-top: 0.65rem; font-size: 0.82rem; color: var(--text-muted); text-align: center; }
 @media (max-width: 760px) { .gallery { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; } }
 
@@ -196,6 +196,16 @@ article strong { color: var(--text-primary); font-weight: 700; }
 .idcard b { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.25rem; color: var(--text-primary); display: block; margin-bottom: 0.5rem; }
 .idcard small { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
 @media (max-width: 760px) { .idcards { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; } }
+
+/* portrait pair */
+.figure-pair { margin: 2.75rem 0; }
+.figure-pair .pair-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+.figure-pair .pair-item { text-align: center; }
+.figure-pair .photo.portrait-ratio { aspect-ratio: 3/4; }
+.figure-pair .photo img { object-position: center top; }
+.figure-pair .pcap { display: block; margin-top: 0.6rem; font-size: 0.85rem; color: var(--text-secondary); font-weight: 500; }
+.figure-pair > figcaption { margin-top: 1rem; text-align: center; font-size: 0.88rem; color: var(--text-muted); font-style: italic; }
+@media (max-width: 600px) { .figure-pair .pair-grid { gap: 0.7rem; } .figure-pair .pcap { font-size: 0.74rem; } }
 
 /* ---------- CTA ---------- */
 .cta { margin: 4rem auto 0; }
@@ -323,12 +333,7 @@ footer a { color: var(--primary); text-decoration: none; }
         <div class="portrait reveal">
           <div class="ring"></div>
           <div class="frame">
-            <div class="mono">
-              <span class="mono-circle">DT</span>
-              <b>Coach Diễm Thúy</b>
-              <small>Dược sĩ · Người truyền cảm hứng</small>
-            </div>
-            <img src="img/diem-thuy-hero.jpg" alt="Coach Diễm Thúy" onerror="this.remove();">
+            <img src="img/diem-thuy-hero.jpg" alt="Diễm Thúy — Dược sĩ, người truyền cảm hứng">
           </div>
           <span class="badge">Trên xe lăn — tinh thần chiến binh</span>
         </div>
@@ -429,12 +434,18 @@ footer a { color: var(--primary); text-decoration: none; }
     <p class="reveal">Bạn biết chúng tôi khởi đầu từ đâu không? <strong>13 thành viên.</strong> 13 con người chuyển khoản ngay tại lớp học của thầy Long. Từ 13, chúng tôi xây lên 35. Đến hôm nay, gần 100 chủ doanh nghiệp sinh hoạt offline cùng nhau tại TP.HCM.</p>
     <p class="beat reveal">Người đàn bà từng trốn sau bốn bức tường, giờ ngồi giữa hàng trăm doanh nhân. Bạn thấy chiếc xe lăn cản tôi ở đâu không?</p>
 
-    <figure class="proof-banner reveal">
-      <span class="pb-icon">🏆</span>
-      <div class="pb-text">
-        <b>BNI Best Chapter — Giám đốc Phát triển</b>
-        <p>Từ 13 thành viên đầu tiên chuyển khoản ngay tại lớp học của thầy Phạm Thành Long, đến gần 100 chủ doanh nghiệp sinh hoạt offline tại TP.HCM.</p>
+    <figure class="figure-pair reveal">
+      <div class="pair-grid">
+        <div class="pair-item">
+          <div class="photo portrait-ratio"><img src="img/cung-thay-long.jpg" alt="Diễm Thúy bên standee thầy Phạm Thành Long tại BNI" loading="lazy"></div>
+          <span class="pcap">Bên thầy Phạm Thành Long — Giám đốc Vùng</span>
+        </div>
+        <div class="pair-item">
+          <div class="photo portrait-ratio"><img src="img/cung-lanh-dao.jpg" alt="Diễm Thúy cùng Ban lãnh đạo BNI Best" loading="lazy"></div>
+          <span class="pcap">Cùng Ban lãnh đạo BNI Best</span>
+        </div>
       </div>
+      <figcaption>Từ 13 thành viên đầu tiên tại lớp học của thầy Phạm Thành Long → gần 100 chủ doanh nghiệp tại TP.HCM.</figcaption>
     </figure>
 
     <div class="divider reveal"><span></span><span></span><span></span></div>
@@ -495,6 +506,18 @@ footer a { color: var(--primary); text-decoration: none; }
         <b>Người mẹ</b>
         <small>Mẹ của 3 cô con gái — lý do tôi đứng dậy mỗi ngày</small>
       </div>
+    </div>
+  </section>
+
+  <!-- PHOTO GALLERY -->
+  <section class="gallery-wrap reveal" aria-label="Những khoảnh khắc trên hành trình">
+    <h2 class="gallery-title">Những khoảnh khắc trên hành trình</h2>
+    <div class="gallery">
+      <figure class="item"><div class="photo"><img src="img/bni-1.jpg" alt="Diễm Thúy rạng rỡ tại Best Chapter" loading="lazy"></div><figcaption>Rạng rỡ tại Best Chapter 06/05/2026</figcaption></figure>
+      <figure class="item"><div class="photo"><img src="img/bni-2.jpg" alt="Diễm Thúy khai mạc cùng Ban lãnh đạo BNI" loading="lazy"></div><figcaption>Khai mạc cùng Ban lãnh đạo</figcaption></figure>
+      <figure class="item"><div class="photo"><img src="img/bni-3.jpg" alt="Diễm Thúy trên cương vị Giám đốc BNI Best" loading="lazy"></div><figcaption>Trên cương vị Giám đốc BNI Best</figcaption></figure>
+      <figure class="item"><div class="photo"><img src="img/bni-4.jpg" alt="Diễm Thúy chia sẻ giữa cộng đồng doanh nhân" loading="lazy"></div><figcaption>Chia sẻ giữa cộng đồng doanh nhân</figcaption></figure>
+      <figure class="item"><div class="photo"><img src="img/bni-5.jpg" alt="Diễm Thúy cầm micro dẫn dắt sự kiện" loading="lazy"></div><figcaption>Cầm micro dẫn dắt — điều tôi từng không dám</figcaption></figure>
     </div>
   </section>
 
