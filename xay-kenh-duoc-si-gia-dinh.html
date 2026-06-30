@@ -262,6 +262,12 @@ footer a { color: var(--primary); text-decoration: none; }
 .related-card .rc-excerpt { font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; flex-grow: 1; }
 .related-card .rc-more { display: inline-block; margin-top: 0.95rem; font-size: 0.85rem; font-weight: 700; color: var(--primary); }
 @media (max-width: 760px) { .related-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; } .nav-menu { width: 300px; } }
+
+/* post images */
+.post-figure { margin: 2.6rem 0; }
+.post-figure .ph-img { display: block; width: 100%; height: auto; border-radius: var(--radius-2xl); box-shadow: var(--shadow-lg); border: 1px solid var(--border-soft); }
+.post-figure.portrait .ph-img { max-width: 360px; margin: 0 auto; }
+.post-figure figcaption { margin-top: 0.85rem; text-align: center; font-size: 0.88rem; color: var(--text-muted); font-style: italic; }
 </style>
 </head>
 <body>
@@ -289,11 +295,16 @@ footer a { color: var(--primary); text-decoration: none; }
         <nav class="nav-menu" id="navMenu" aria-label="Danh sách bài viết">
         <div class="nav-head">Thư mục bài viết</div>
         <a class="nav-link" href="index.html">Chiếc xe lăn không phải dấu chấm hết</a>
+        <a class="nav-link" href="co-be-quang-ngai-uoc-mo-dien-gia.html">Cô bé Quảng Ngãi và giấc mơ diễn giả</a>
+        <a class="nav-link" href="25-nam-viem-da-khop.html">25 năm sống chung với viêm đa khớp</a>
+        <a class="nav-link" href="danh-doi-doi-chan-giu-con.html">Đánh đổi đôi chân để giữ con</a>
+        <a class="nav-link" href="ba-nam-sau-bon-buc-tuong.html">Ba năm sau bốn bức tường</a>
+        <a class="nav-link" href="ngay-dau-len-hinh-xe-lan.html">Ngày đầu tôi để xe lăn lên hình</a>
         <a class="nav-link" href="cau-noi-cua-thay.html">Một câu nói của thầy đổi đời tôi</a>
         <a class="nav-link current" href="xay-kenh-duoc-si-gia-dinh.html">Xây kênh Dược sĩ gia đình từ con số 0</a>
-        <a class="nav-link" href="ngay-dau-len-hinh-xe-lan.html">Ngày đầu tôi để xe lăn lên hình</a>
         <a class="nav-link" href="tu-13-nguoi-den-100-chu-doanh-nghiep.html">Từ 13 người đến gần 100 chủ doanh nghiệp</a>
-        <a class="nav-link" href="25-nam-viem-da-khop.html">25 năm sống chung với viêm đa khớp</a>
+        <a class="nav-link" href="hanh-trinh-dao-tao-100-hoc-vien.html">Từ học viên đầu tiên đến hơn 100 người</a>
+        <a class="nav-link" href="mai-am-ly-do-toi-dung-day.html">Mái ấm — lý do tôi đứng dậy</a>
         </nav>
       </div>
       <button class="theme-toggle" id="themeToggle" aria-label="Đổi giao diện sáng/tối">🌙</button>
@@ -321,9 +332,11 @@ footer a { color: var(--primary); text-decoration: none; }
 
   <article class="wrap">
     <p class="lead reveal">Ngày tôi quyết định xây kênh, trong tay tôi có đúng ba thứ: một chiếc điện thoại, một cái nghề, và một nỗi sợ to bằng cả căn phòng.</p>
+    <figure class="post-figure portrait reveal"><img class="ph-img" src="img/diem-thuy-hero.jpg" alt="Coach Diễm Thúy" loading="lazy"><figcaption>Dược sĩ gia đình — thương hiệu tôi xây từ con số 0.</figcaption></figure>
     <p class="reveal">Tôi không có ekip. Không studio. Không đèn đẹp. Tôi quay video đầu tiên ngay trên chiếc xe lăn, trong góc nhà, tay run đến mức suýt làm rớt điện thoại.</p>
     <p class="reveal">Nhiều người hỏi tôi bí quyết. Thật ra tôi chẳng có bí quyết gì cao siêu. Tôi chỉ làm đúng ba việc.</p>
     <div class="divider reveal"><span></span><span></span><span></span></div>
+    <figure class="post-figure reveal"><img class="ph-img" src="img/bni-4.jpg" alt="Diễm Thúy cầm micro chia sẻ" loading="lazy"><figcaption>Chia sẻ kinh nghiệm xây kênh giữa cộng đồng.</figcaption></figure>
     <p class="beat reveal">Việc thứ nhất, tôi chọn đúng cái mình rành nhất.</p>
     <p class="reveal">Tôi là dược sĩ, nên tôi nói về thuốc, về sức khỏe gia đình, về những thứ một người mẹ cần biết khi con ốm. Tôi không cố làm chuyên gia của mọi thứ. Tôi chỉ làm chuyên gia của một thứ.</p>
     <p class="beat reveal">Việc thứ hai, tôi nói thật.</p>
@@ -332,6 +345,7 @@ footer a { color: var(--primary); text-decoration: none; }
     <p class="reveal">Video đầu của tôi lèo tèo vài chục lượt. Tôi vẫn đăng. Video sau vẫn ít. Tôi vẫn đăng. Đến giờ thì nhiều đến mức không đếm xuể nữa.</p>
     <p class="reveal">Có hôm tay tôi sưng đau, cầm điện thoại còn không vững, tôi vẫn quay. Quay xong nằm thở dốc. Nhưng tôi tự nhủ, nếu hôm nay mình cho phép mình nghỉ, thì ngày mai sẽ lại có một cái cớ khác để nghỉ tiếp.</p>
     <div class="divider reveal"><span></span><span></span><span></span></div>
+    <figure class="post-figure reveal"><img class="ph-img" src="img/bni-1.jpg" alt="Diễm Thúy tại sự kiện BNI" loading="lazy"><figcaption>Niềm vui khi được là chính mình, đúng nghề mình.</figcaption></figure>
     <p class="reveal">Bạn biết điều gì thật sự thay đổi không? Không phải thuật toán. Là tôi. Mỗi video tôi bớt sợ một chút, nói tự nhiên hơn một chút.</p>
     <p class="reveal">Rồi một ngày, có người nhắn cho tôi: "Chị ơi, nhờ video của chị mà con em hạ sốt an toàn, em cảm ơn chị nhiều lắm." Tôi đọc xong ngồi khóc một mình.</p>
     <blockquote class="pull reveal"><span class="hl">Xây kênh không phải là chạy theo lượt xem. Nó là gửi đúng điều mình biết tới đúng người đang cần.</span></blockquote>
